@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import MenuFunction from "./Menu";
 import ticket from "./assets/flypink.jpg"
+import { Link } from "react-router-dom";
 
 export default function AvailableTickets() {
     //airplane img
@@ -18,9 +19,11 @@ export default function AvailableTickets() {
                     <p>04/10/1999</p>
                     <p> R$ 1.000,00</p>
                 </div>
-                <button>
-                    Detalhes
-                </button>
+                <Link to={"/ticket/:id"}>
+                    <button>
+                        Detalhes
+                    </button>
+                </Link>
             </Tickets>
         </>
     )
@@ -28,9 +31,10 @@ export default function AvailableTickets() {
 
 const Tickets = styled.div`
     width:100%;
-height:90px;
-background-color: gray;
-display:flex;
+    height:90px;
+    background-color: gray;
+    display:flex;
+
 img {
     height:80px;
 }
