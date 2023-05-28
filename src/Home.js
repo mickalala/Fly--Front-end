@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Menu from './Menu.js';
 
 export default function Home() {
     return (
         <>
-            <Menu >
-{/* <img src={} alt='logo.jpg'/> */}
-                <input placeholder='ciudadee' />
-            </Menu >
+            <Menu />
             <h1>Fly, lovely angel, fly</h1>
             <Capitals >
                 <City />
@@ -56,14 +54,6 @@ export default function Home() {
     )
 }
 
-const Menu = styled.div`
-            height:80px;
-            width:100%;
-            background-color: palegreen;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            `
 const Capitals = styled.div`
 height:600px;
 width:100%;
