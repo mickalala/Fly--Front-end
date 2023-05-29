@@ -1,15 +1,28 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Menu from './Menu.js';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 export default function Home() {
+    const [options, setOptions] = useState(false)
+    useEffect(() => {
+        setOptions(false)
+        axios.get(`${process.env.REACT_APP_API_URL}/cities`)
+            .then()
+            .catch(err => {
+                alert(err.message)
+            })
+
+    }, [])
     return (
         <>
             <Menu />
-            <h1>Fly, lovely angel, fly</h1>
+            <Title>Fly, lovely angel, fly</Title>
             <Capitals >
-                <City />
-                <CityOptions>
+                <City onClick={() => setOptions(true)} options={options} />
+                <CityOptions options={options}>
                     <Link to={"/about"}>
                         <button>Sobre</button>
                     </Link>
@@ -23,6 +36,7 @@ export default function Home() {
                     </Link>
 
                 </CityOptions>
+                {/* <City onClick={() => setOptions(true)} options={options} />
                 <City />
                 <City />
                 <City />
@@ -46,13 +60,17 @@ export default function Home() {
                 <City />
                 <City />
                 <City />
-                <City />
-                <City />
+                <City /> */}
             </Capitals>
         </>
 
     )
 }
+const Title= styled.h1`
+font-size:50px;
+color: blue;
+margin-right:60px;
+`
 
 const Capitals = styled.div`
 height:600px;
@@ -63,6 +81,7 @@ display:flex;
 flex-wrap: wrap;
 justify-content:center;
 align-items:center;
+
 `
 const City = styled.div`
 height:90px;
@@ -72,9 +91,9 @@ background-color:darkcyan;
 border-radius:5px;
 
 margin: 30px 30px;
-&:hover{
-background-color:yellowgreen;
-}
+
+display:${(props) => (props.options) ? 'none' : ""};
+
 
 `
 const CityOptions = styled.div`
@@ -89,6 +108,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+display:${(props) => (props.options) ? '' : "none"};
 button{
     width:80px;
     background-color:transparent;
