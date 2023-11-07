@@ -3,24 +3,24 @@ import styled from 'styled-components';
 import Menu from '../Menu/Menu.js';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import cities from '../../cities.js';
 
 export default function Home() {
     const [options, setOptions] = useState(false)
-    useEffect(() => {
-        setOptions(false)
-        axios.get(`${process.env.REACT_APP_API_URL}/cities`)
-            .then()
-            .catch(err => {
-                alert(err.message)
-            })
+    // useEffect(() => {
+    //     setOptions(false)
+    //     axios.get(`${process.env.REACT_APP_API_URL}/cities`)
+    //         .then()
+    //         .catch(err => {
+    //             alert(err.message)
+    //         })
 
-    }, [])
+    // }, [])
     return (
         <>
             <Menu />
             <Title>Fly, lovely angel, fly</Title>
-            <Capitals >
+            <Capitals onClick={() => setOptions(!options)} >
                 <City onClick={() => setOptions(true)} options={options} />
                 <CityOptions options={options}>
                     <Link to={"/about"}>
@@ -36,46 +36,24 @@ export default function Home() {
                     </Link>
 
                 </CityOptions>
-                {/* <City onClick={() => setOptions(true)} options={options} />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City />
-                <City /> */}
+                {cities.map((c) =>
+                    <City onClick={() => setOptions(true)} options={options} />)}
             </Capitals>
         </>
 
     )
 }
-const Title= styled.h1`
+const Title = styled.h1`
 font-size:50px;
-color: blue;
+color: #800000;
 margin-right:60px;
+margin-top:17px;
 `
 
 const Capitals = styled.div`
 height:600px;
 width:100%;
-background-color: lightpink;
+background-color: #8fbc8f;
 
 display:flex;
 flex-wrap: wrap;
@@ -86,7 +64,7 @@ align-items:center;
 const City = styled.div`
 height:90px;
 width:90px;
-background-color:darkcyan;
+background-color:#87ceeb;
 
 border-radius:5px;
 
