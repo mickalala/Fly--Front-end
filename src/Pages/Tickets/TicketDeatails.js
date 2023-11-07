@@ -1,4 +1,4 @@
-import MenuFunction from "./Menu";
+import MenuFunction from "../Menu/Menu.js";
 import styled from "styled-components";
 
 export default function TicketDetails() {

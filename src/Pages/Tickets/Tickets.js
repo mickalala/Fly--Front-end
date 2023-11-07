@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import MenuFunction from "./Menu";
-import ticket from "./assets/flypink.jpg"
+import MenuFunction from "../Menu/Menu.js";
+import ticket from "../../assets/flypink.jpg"
 import { Link } from "react-router-dom";
 
 export default function AvailableTickets() {

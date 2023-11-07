@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Menu from './Menu.js';
+import Menu from '../Menu/Menu.js';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 

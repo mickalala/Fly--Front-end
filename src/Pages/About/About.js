@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import Menu from "./Menu"
-import ams from "./assets/Am.jpg"
-import cloud from "./assets/transparent.png"
+import Menu from "../Menu/Menu"
+import ams from "../../assets/Am.jpg"
+import cloud from "../../assets/transparent.png"
 import { Link } from "react-router-dom"
 
 

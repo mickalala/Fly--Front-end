@@ -5,7 +5,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 body{
-   background:#E5E5E5;
+   background-color:#E5E5E5;
+   font-family:'Pacifico', cursive;
 }
 `
-export default GlobalStyle
+export default GlobalStyle;

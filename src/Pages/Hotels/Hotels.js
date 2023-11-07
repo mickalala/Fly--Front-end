@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import MenuFunction from "./Menu";
-import hotel from "./assets/Hotel-PNG.png"
+import MenuFunction from "../Menu/Menu";
+import hotel from "../../assets/Hotel-PNG.png"
 
 import { Link } from "react-router-dom";
 

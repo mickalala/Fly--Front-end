@@ -1,9 +1,9 @@
-import Home from './Home.js';
-import AboutCity from './About.js';
-import AvailableTickets from './Tickets.js';
-import AvailableHotels from './Hotels.js';
-import TicketDetails from './TicketDeatails.js';
-import HotelDetails from './HotelDetails.js';
+import Home from './Pages/Home/Home.js';
+import AboutCity from './Pages/About/About.js';
+import AvailableTickets from './Pages/Tickets/Tickets.js';
+import AvailableHotels from './Pages/Hotels/Hotels.js';
+import TicketDetails from './Pages/Tickets/TicketDeatails.js';
+import HotelDetails from './Pages/Hotels/HotelDetails.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {

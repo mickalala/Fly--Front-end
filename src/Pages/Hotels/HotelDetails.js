@@ -1,11 +1,9 @@
-import MenuFunction from "./Menu";
+import MenuFunction from "../Menu/Menu.js";
 import styled from "styled-components";
-import GlobalStyle from "./styles/GlobalStyle";
 
 export default function HotelDetails() {
     return (
-        <>
-        <GlobalStyle/>
+        <>   
             <MenuFunction />
 
             <MainDiv>
@@ -25,7 +23,7 @@ const MainDiv = styled.div`
    width:100% auto;
    background-color: #b0c4de;
    padding: 40px;
-
+   
    h1{
     font-size:40px;
     margin-bottom:30px;
@@ -33,9 +31,9 @@ const MainDiv = styled.div`
 `
 
 const Hotelsimages = styled.div`
-   width: 100% ;
+   width: 100% auto ;
    height:200px;
    border: 3px ;
    background-color:#f08080;
-   position:absolute;
+   position:relative;
 `
